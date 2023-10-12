@@ -7,12 +7,10 @@ use Illuminate\Http\Request;
 
 class PemainController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    //fungsi index
     public function index()
     {
-        $pemain = Pemain::all(); // Mengambil semua data pemain dari model
+        $pemain = \App\Models\Pemain::all(); // Mengambil semua data pemain dari model
         return view('pemain', compact('pemain')); // Mengirim data pemain ke view   
     }
 
